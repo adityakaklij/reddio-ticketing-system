@@ -1,0 +1,30 @@
+curl -v https://api-dev.reddio.com/v1/mints  -H 'content-type: application/json' -H 'X-API-Key: rk-0037101b-606a-43e5-a98a-9703e0e179bc'  -d '{ "contract_address":"0x175a48b997C85696d3FA8EFa8D17F3AA4C79A9D5", "stark_key":"0x102112ef1ee5cf579429ee723fedc367cde3189715000e99611dc2d6fb5dfb7", "amount":"1"}'
+headers = {
+    'content-type': 'application/json',
+    'X-API-Key': 'rk-0037101b-606a-43e5-a98a-9703e0e179bc',
+}
+
+json_data = {
+    'contract_address': '0x175a48b997C85696d3FA8EFa8D17F3AA4C79A9D5',
+    'stark_key': '0x102112ef1ee5cf579429ee723fedc367cde3189715000e99611dc2d6fb5dfb7',
+    'amount': '10',
+}
+
+response = requests.post('https://api-dev.reddio.com/v1/mints', headers=headers, json=json_data)
+
+https://api-dev.reddio.com
+
+
+fetch('https://api-dev.reddio.com/v1/mints', { 
+  headers: {
+    'content-type': 'application/json',
+    'X-API-Key': 'rk-0037101b-606a-43e5-a98a-9703e0e179bc',
+  },
+  json_data = {
+    'contract_address': '0x175a48b997C85696d3FA8EFa8D17F3AA4C79A9D5',
+    'stark_key': '0x102112ef1ee5cf579429ee723fedc367cde3189715000e99611dc2d6fb5dfb7',
+    'amount': '10',
+}
+})
+.then(response => response.json())
+.then(json => console.log(json));
